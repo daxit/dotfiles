@@ -1,0 +1,45 @@
+{
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.fontFamily": "IBM Plex Mono",
+  "editor.fontSize": 14,
+  "editor.formatOnPaste": true,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [100],
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "wordWrapColumn",
+  "files.trimTrailingWhitespace": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.startupEditor": "welcomePage",
+  "prettier.printWidth": 100,
+  "prettier.singleQuote": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveTimeout": 2000,
+  "eslint.run": "onSave",
+  "editor.wordWrapColumn": 100,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.zoomLevel": 0,
+  "html.format.indentInnerHtml": true,
+  "prettier.trailingComma": "none",
+  "prettier.jsxSingleQuote": true,
+  "prettier.arrowParens": "avoid",
+  "vetur.format.defaultFormatter.js": "prettier-eslint",
+  "[mdx]": {
+    "editor.wordWrap": "off"
+  },
+  "editor.multiCursorModifier": "alt"
+}
