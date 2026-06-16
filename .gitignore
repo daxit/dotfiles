@@ -1,0 +1,13 @@
+# macOS noise
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# nix build artifacts
+result
+result-*
+
+# direnv
+.direnv/
