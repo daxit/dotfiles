@@ -16,7 +16,7 @@
       # Pinned apps, left-to-right, captured from the current Dock.
       persistent-apps = [
         "/Applications/Spark.app"
-        "/System/Applications/Safari.app"
+        "/Applications/Safari.app"
         "/Applications/Brave Browser.app"
         "/Applications/Notion Calendar.app"
         "/Applications/Notion.app"
@@ -34,10 +34,6 @@
       ShowPathbar = true;
       ShowStatusBar = true;
       FXPreferredViewStyle = "Nlsv"; # list view by default
-    };
-
-    trackpad = {
-      Clicking = true; # tap to click
     };
 
     NSGlobalDomain = {

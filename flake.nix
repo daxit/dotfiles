@@ -24,7 +24,7 @@
     }:
     let
       # Single host today; add more entries here to manage additional Macs.
-      username = "daxit";
+      username = "daxbook";
     in
     {
       darwinConfigurations."daxbook" = nix-darwin.lib.darwinSystem {

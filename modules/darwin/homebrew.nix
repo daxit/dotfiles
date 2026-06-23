@@ -21,9 +21,10 @@
       "claude"
       "cursor"
       "devin-desktop"
-      "gog-galaxy"
+      # "gog-galaxy"  # Intel-only; requires Rosetta 2 (`softwareupdate --install-rosetta`)
       "google-chrome"
       "handbrake-app"
+      "heroic"
       "iina"
       "keka"
       "mythic"

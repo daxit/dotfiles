@@ -23,19 +23,18 @@
       gsw = "git switch";
     };
 
-    initContent = ''
-      # Homebrew — puts `brew`/`mas` on the interactive PATH.
-      # nix-darwin places nix profiles earlier, so nix CLIs win over brew duplicates.
+    # Runs in ~/.zprofile (login shells). home-manager owns this file, which
+    # prevents Homebrew's installer from creating its own duplicate ~/.zprofile.
+    profileExtra = ''
       if [ -x /opt/homebrew/bin/brew ]; then
         eval "$(/opt/homebrew/bin/brew shellenv)"
       fi
     '';
-  };
 
-  # fnm handles installation and zsh integration (reads .nvmrc / .node-version).
-  programs.fnm = {
-    enable = true;
-    enableZshIntegration = true;
+    # fnm shell hook — auto-switches Node version on cd (reads .nvmrc / .node-version).
+    initContent = ''
+      eval "$(fnm env --use-on-cd --shell zsh)"
+    '';
   };
 
   programs.starship.enable = true;
