@@ -26,6 +26,7 @@
   # Auth tokens are not managed here — run `gh auth login` after first build.
   programs.gh = {
     enable = true;
+    gitCredentialHelper.enable = true;
     settings = {
       git_protocol = "https";
       prompt = "enabled";
