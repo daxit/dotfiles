@@ -1,5 +1,7 @@
-{ ... }:
+{ pkgs, ... }:
 {
+  # GUI apps that ship as macOS binaries — not buildable from source by Nix on macOS.
+  environment.systemPackages = [ pkgs.ghostty-bin ];
   # macOS system preferences captured declaratively. Start conservative and
   # expand over time. After changing these, log out/in (or restart) for some
   # to take full effect. Full option list:
@@ -16,7 +18,7 @@
       # Pinned apps, left-to-right, captured from the current Dock.
       persistent-apps = [
         "/Applications/Spark.app"
-        "/Applications/Safari.app"
+        "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
         "/Applications/Brave Browser.app"
         "/Applications/Notion Calendar.app"
         "/Applications/Notion.app"
@@ -25,6 +27,7 @@
         "/System/Applications/iPhone Mirroring.app"
         "/Applications/Google Chrome.app"
         "/System/Applications/Notes.app"
+        "/Applications/Nix Apps/Ghostty.app"
       ];
     };
 
