@@ -13,7 +13,8 @@ fonts, and macOS preferences — with a handful of commands.
 flake.nix              Inputs (nixpkgs, nix-darwin, home-manager) + outputs
 hosts/daxbook.nix      Per-machine nix-darwin system config
 modules/darwin/        System-level: homebrew (GUI apps), macOS defaults, fonts
-modules/home/          User-level: CLI packages, zsh + starship, git/gh
+modules/home/          User-level: CLI packages, zsh + starship, git/gh,
+                       Ghostty, Claude Code
 ```
 
 - **CLI tools** come from nix (`modules/home/packages.nix`).
@@ -58,9 +59,14 @@ modules/home/          User-level: CLI packages, zsh + starship, git/gh
 
 ## Editing the config
 
-- Add/remove GUI apps → `modules/darwin/homebrew.nix` (`casks`).
+- Add/remove GUI apps → `modules/darwin/homebrew.nix` (`casks`). Note:
+  `cleanup = "zap"` means any cask installed manually (outside this list) gets
+  its app **and its data** removed on the next `darwin-rebuild switch` — add
+  it here first if you want to keep it.
 - Add/remove CLI tools → `modules/home/packages.nix`.
 - Shell/aliases/prompt → `modules/home/shell.nix`.
+- Ghostty terminal → `modules/home/ghostty.conf`.
+- Claude Code defaults → `modules/home/claude-code.nix`.
 - macOS system preferences → `modules/darwin/system.nix`.
 
 After any change, validate before applying:

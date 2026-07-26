@@ -51,8 +51,9 @@
       NSAutomaticDashSubstitutionEnabled = false;
     };
 
-    # Save screenshots somewhere tidy instead of the Desktop.
-    screencapture.location = "~/Pictures/Screenshots";
+    # Screenshots land on the Desktop so they stay visible and get dealt with
+    # rather than piling up unnoticed in a subfolder.
+    screencapture.location = "~/Desktop";
 
     # Avoid creating .DS_Store on network and USB volumes.
     CustomUserPreferences = {

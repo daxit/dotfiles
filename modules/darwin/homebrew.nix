@@ -19,17 +19,20 @@
       "betterdisplay"
       "brave-browser"
       "claude"
+      "claude-code"
       "cursor"
       "devin-desktop"
       # "gog-galaxy"  # Intel-only; requires Rosetta 2 (`softwareupdate --install-rosetta`)
       "google-chrome"
       "handbrake-app"
+      "helium-browser"
       "heroic"
       "iina"
       "keka"
       "mythic"
       "notion"
       "notion-calendar"
+      "shottr"
       "spotify"
       "steam"
       "visual-studio-code"
@@ -46,7 +49,9 @@
       Spark = 1176895641;
       "uBlock Origin Lite" = 6745342698;
       WhatsApp = 310633997;
-      Xcode = 497799835;
+      # Xcode is installed directly from developer.apple.com, not the App Store,
+      # so `mas` cannot manage it — listing it here triggers a redundant
+      # multi-GB download attempt on every activation.
     };
   };
 }

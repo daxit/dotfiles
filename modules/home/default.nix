@@ -4,6 +4,7 @@
     ./packages.nix
     ./shell.nix
     ./git.nix
+    ./claude-code.nix
   ];
 
   home.username = username;
