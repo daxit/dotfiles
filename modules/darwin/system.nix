@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 {
   # GUI apps that ship as macOS binaries — not buildable from source by Nix on macOS.
   environment.systemPackages = [ pkgs.ghostty-bin ];
@@ -51,7 +51,8 @@
       NSAutomaticDashSubstitutionEnabled = false;
     };
 
-    screencapture.location = "~/Desktop";
+    # Absolute path required — screencapture does not expand a literal "~".
+    screencapture.location = "/Users/${username}/Desktop";
 
     # Avoid creating .DS_Store on network and USB volumes.
     CustomUserPreferences = {
