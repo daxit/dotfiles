@@ -59,10 +59,9 @@ modules/home/          User-level: CLI packages, zsh + starship, git/gh,
 
 ## Editing the config
 
-- Add/remove GUI apps → `modules/darwin/homebrew.nix` (`casks`). Note:
-  `cleanup = "zap"` means any cask installed manually (outside this list) gets
-  its app **and its data** removed on the next `darwin-rebuild switch` — add
-  it here first if you want to keep it.
+- Add/remove GUI apps → `modules/darwin/homebrew.nix` (`casks`). `cleanup = "zap"`
+  removes undeclared casks **and their data** on the next switch, so declare a
+  cask here before installing it.
 - Add/remove CLI tools → `modules/home/packages.nix`.
 - Shell/aliases/prompt → `modules/home/shell.nix`.
 - Ghostty terminal → `modules/home/ghostty.conf`.

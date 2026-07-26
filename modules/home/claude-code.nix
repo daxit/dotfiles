@@ -1,15 +1,13 @@
 { pkgs, lib, ... }:
 {
-  # ~/.claude/settings.json is a live file Claude Code writes to itself
-  # (e.g. /model, /effort, /config), so it's merged via jq on activation
-  # rather than symlinked read-only like starship.toml/ghostty.conf.
+  # Claude Code rewrites settings.json itself (/model, /effort), so these keys
+  # are merged on activation rather than symlinked read-only.
   home.activation.claudeCodeSettings = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     settingsFile="$HOME/.claude/settings.json"
     mkdir -p "$HOME/.claude"
     [ -f "$settingsFile" ] || echo '{}' > "$settingsFile"
 
-    # Claude Code owns this file, so it can be mid-write or hand-edited into
-    # invalid JSON. Warn and move on rather than aborting the whole activation.
+    # Invalid JSON must not abort activation.
     if ${pkgs.jq}/bin/jq \
          '.model = "opusplan" | .permissions.defaultMode = "plan" | .effortLevel = "high"' \
          "$settingsFile" > "$settingsFile.tmp" 2>/dev/null; then

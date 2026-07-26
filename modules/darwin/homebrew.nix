@@ -49,9 +49,7 @@
       Spark = 1176895641;
       "uBlock Origin Lite" = 6745342698;
       WhatsApp = 310633997;
-      # Xcode is installed directly from developer.apple.com, not the App Store,
-      # so `mas` cannot manage it — listing it here triggers a redundant
-      # multi-GB download attempt on every activation.
+      # Xcode omitted: installed from developer.apple.com, so mas can't manage it.
     };
   };
 }

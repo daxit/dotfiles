@@ -40,7 +40,6 @@
   programs.starship.enable = true;
   xdg.configFile."starship.toml".source = ./starship.toml;
 
-  # Ghostty itself is installed system-wide (modules/darwin/system.nix); this
-  # only manages its config. The target filename must be exactly "config".
+  # Ghostty is installed in modules/darwin/system.nix; target must be named "config".
   xdg.configFile."ghostty/config".source = ./ghostty.conf;
 }
