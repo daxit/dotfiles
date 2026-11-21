@@ -47,6 +47,7 @@
       "Pilot Training" = 1272775528;
       "Prime Video" = 545519333;
       Spark = 1176895641;
+      Tailscale = 1475387142;    # reach the homelab (daxlab) over the tailnet
       "uBlock Origin Lite" = 6745342698;
       WhatsApp = 310633997;
       # Xcode omitted: installed from developer.apple.com, so mas can't manage it.

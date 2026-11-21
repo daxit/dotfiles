@@ -2,6 +2,10 @@
 {
   # GUI apps that ship as macOS binaries — not buildable from source by Nix on macOS.
   environment.systemPackages = [ pkgs.ghostty-bin ];
+
+  # The App Store Tailscale has no `tailscale` command on the PATH; its CLI is
+  # the app binary. Mac-only, so it lives here, not in the shared home config.
+  environment.shellAliases.tailscale = "/Applications/Tailscale.app/Contents/MacOS/Tailscale";
   # macOS system preferences captured declaratively. Start conservative and
   # expand over time. After changing these, log out/in (or restart) for some
   # to take full effect. Full option list:
