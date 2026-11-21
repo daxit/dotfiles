@@ -20,6 +20,7 @@
       "brave-browser"
       "claude"
       "claude-code"
+      "cmux"
       "cursor"
       "devin-desktop"
       # "gog-galaxy"  # Intel-only; requires Rosetta 2 (`softwareupdate --install-rosetta`)
@@ -44,12 +45,14 @@
     masApps = {
       Bitwarden = 1352778147;
       Flow = 1423210932;         # Pomodoro timer
+      "Microsoft Outlook" = 985367838;
       "Pilot Training" = 1272775528;
       "Prime Video" = 545519333;
       Spark = 1176895641;
       Tailscale = 1475387142;    # reach the homelab (daxlab) over the tailnet
       "uBlock Origin Lite" = 6745342698;
       WhatsApp = 310633997;
+      Xnip = 1221250572;         # screenshot tool
       # Xcode omitted: installed from developer.apple.com, so mas can't manage it.
     };
   };
