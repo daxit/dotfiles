@@ -23,6 +23,12 @@
     ];
   };
 
+  # Syntax-highlighted, word-level git diffs; set as git's pager.
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
+  };
+
   # Auth tokens are not managed here — run `gh auth login` after first build.
   programs.gh = {
     enable = true;

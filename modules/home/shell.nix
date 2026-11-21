@@ -37,6 +37,10 @@
     '';
   };
 
+  # Fuzzy finder. Its zsh integration binds Ctrl+R (history search), Ctrl+T
+  # (insert a file path) and Alt+C (cd into a folder).
+  programs.fzf.enable = true;
+
   programs.starship.enable = true;
   xdg.configFile."starship.toml".source = ./starship.toml;
 
